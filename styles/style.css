@@ -1,0 +1,216 @@
+@font-face {
+  font-family: Lazen;
+  src: url("../fonts/LazenbyCompLiquid.ttf");
+}
+
+@font-face {
+  font-family: 'Open Sans Regular';
+  src: url("../fonts/OpenSans-Regular.ttf");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Open Sans Regular';
+  background-color: #000;
+  color: #2ec2bd;
+  margin: 0;
+}
+
+section {
+  padding: 2% 4%;
+  border-top: 1px solid #daa520;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Lazen;
+}
+
+h1 {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 8px -8px 15px #daa520;
+}
+
+h2 {
+  box-shadow: -8px 8px 15px #daa520;
+  padding: 20px 40px;
+  width: 50%;
+  display: block;
+  margin: 40px auto;
+  text-align: center;
+  border-radius: 10px;
+}
+
+h3 {
+  font-size: 150%;
+  margin-bottom: 40px;
+}
+
+p {
+  font-size: 120%;
+  text-align: justify;
+}
+
+p::first-letter {
+  font-size: 150%;
+  color: #daa520;
+  font-weight: bold;
+}
+
+.clearfix::after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+#container {
+  width: 80%;
+  margin: auto;
+}
+
+#hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#hero h1 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 8px -8px 15px #daa520;
+}
+
+#intro img {
+  float: right;
+  width: 50%;
+  padding: 2%;
+}
+
+#galeria {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#galeria picture {
+  text-align: center;
+  box-shadow: 
+  0 -6px 10px #daa520,
+  0 6px 10px #daa520,
+  3px 0 10px #daa520,
+  -3px -0 10px #daa520;
+  margin: 4%;
+  padding: 2%;
+}
+
+#galeria img {
+  width: 100%;
+}
+
+#galeria button {
+  background-color: #2ec2bd;
+  cursor: pointer;
+}
+
+#galeria button:hover {
+  background-color: #259b97;
+}
+
+#footer {
+  width: 100%;
+  text-align: center;
+  box-shadow: 
+    0 -10px 15px #daa520,
+    0 10px 15px #daa520,
+    5px 0 15px #daa520,
+    -5px -0 15px #daa520;
+  margin: 30px 0;
+  font-weight: bold;
+  font-size: 90%;
+  padding: 2%;
+}
+
+.topnav {
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+  background-color: #333;
+  z-index: 1000;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  font-family: Lazen;
+  color: #2ec2bd;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #daa520;
+  color: #000;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 1100px) {
+  #galeria {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #container {
+    width: 100%;
+  }
+
+  #intro img {
+    display: block;
+    width: 100%;
+  }
+
+  #galeria {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  .topnav.responsive {
+    position: fixed;
+  }
+  .topnav.responsive .icon {
+    position: fixed;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
